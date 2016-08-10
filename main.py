@@ -52,10 +52,10 @@ def randomchat(bot, update):
 
     if "la rusa" in msg:
         reply = random.choice([
-            "Nestorov: Ahora te daré la brasa con un parche mío en Github.",
-            "Nestorov: Eso en Javascript va 183452345342 millones de veces más rápido.",
-            "Nestorov: SystemD es nuestro señor y salvador, haters de mierda.",
-            "Nestorov: Me jode mucho que Reset me haya programado en Python.",
+            "Ahora te daré la brasa con un parche mío en Github.",
+            "Eso en Javascript va 183452345342 millones de veces más rápido.",
+            "SystemD es nuestro señor y salvador, haters de mierda.",
+            "Me jode mucho que Reset me haya programado en Python.",
         ])
 
     if "datio" in msg:
