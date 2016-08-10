@@ -87,7 +87,7 @@ def randomchat(bot, update):
 def buscar(bot, update, args):
     duck_url = "http://api.duckduckgo.com"
 
-    params = {"q": args[0], "format": "json", "no_html": 1, "skip_disambig": 1}
+    params = {"q": " ".join(args), "format": "json", "no_html": 1, "skip_disambig": 1}
     query = requests.get(duck_url, params=params)
     if len(query.json().items()) > 0:
         result = ""
