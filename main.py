@@ -4,14 +4,10 @@
 import logging
 import requests
 import sys
-import datetime
 import random
 
-from bs4 import BeautifulSoup
 from telegram.ext import (Updater, CommandHandler, MessageHandler,
                           Filters)
-from telegram.ext.jobqueue import Job
-from telegram import ChatAction
 
 from config import config
 
@@ -40,6 +36,7 @@ def error(bot, update, error):
 
 def randomchat(bot, update):
     msg = update.message.text.lower()
+    user_name = update.message.from_user.username.lower()
     reply = None
 
     if "as a service" in msg:
@@ -61,9 +58,6 @@ def randomchat(bot, update):
     if "datio" in msg:
         reply = "¡ah!, ¿ya existe Datio?"
 
-    if "adslzone" in msg:
-        reply = "Para no gustarte esa web, bien que la compartes, @yacopi"
-
     if "maiesekueleh" in msg:
         reply = random.choice([
             "XRO HASEJURATE DE KE HES LA HENTEPRAIS KORPRORATE HEDISION KRAKEADA.",
@@ -79,6 +73,9 @@ def randomchat(bot, update):
             "LLO HUSO TAMVIEN EL MEGOR LENJUAGUE DEL MUNDO",
             "NO PUEDO HINZTALARLO EN MI JAMEVOY HALLUDA"
         ])
+
+    if "puto bot" in msg and "martixx" in user_name:
+        reply = "HOYGA, punki, no se pase un pelo"
 
     if reply is not None:
         bot.sendMessage(update.message.chat_id, text=reply)
