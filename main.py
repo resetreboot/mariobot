@@ -37,51 +37,57 @@ def error(bot, update, error):
 def randomchat(bot, update):
     msg = update.message.text.lower()
     user_name = update.message.from_user.username.lower()
-    reply = None
+    replies = []
 
     if "as a service" in msg:
-        reply = random.choice([
+        replies.append(random.choice([
             "Que no te hoygan en Stratio",
             "Lo desplegaremos con Docker",
             "Eso se hace con Mesos en dos patadas",
             "No tiene suficiente hype",
-        ])
+        ]))
 
     if "la rusa" in msg:
-        reply = random.choice([
+        replies.append(random.choice([
             "Ahora te daré la brasa con un parche mío en Github.",
             "Eso en Javascript va 183452345342 millones de veces más rápido.",
             "SystemD es nuestro señor y salvador, haters de mierda.",
             "Me jode mucho que Reset me haya programado en Python.",
-        ])
+        ]))
 
     if "datio" in msg:
-        reply = "¡ah!, ¿ya existe Datio?"
+        replies.append("¡ah!, ¿ya existe Datio?")
 
     if "maiesekueleh" in msg:
-        reply = random.choice([
+        replies.append(random.choice([
             "XRO HASEJURATE DE KE HES LA HENTEPRAIS KORPRORATE HEDISION KRAKEADA.",
             "HOYGAN VOFERS, PACENME LA HULTIMA BERSION.",
             "MUSHO MEGOR KE LA MONGERDEVE HESA RARA.",
             "HOYGAN KOMO ME LO HINZTALO EN MI JUINDOUZ ENETE?"
-        ])
+        ]))
 
     if "peachepe" in msg:
-        reply = random.choice([
+        replies.append(random.choice([
             "XRA AZER JUEBS DE HEXKANDALO KRAKEADO PRIMIAM POFREZIONAL HEDISHION",
             "HOYGAN KE NO ME KOMPILA MI KODIJO PEACHEPE HALLUDENME",
             "LLO HUSO TAMVIEN EL MEGOR LENJUAGUE DEL MUNDO",
             "NO PUEDO HINZTALARLO EN MI JAMEVOY HALLUDA"
-        ])
+        ]))
 
     if "puto bot" in msg and "martixx" in user_name:
-        reply = "HOYGA, punki, no se pase un pelo"
+        replies.append("HOYGA, punki, no se pase un pelo")
 
     if "linux" in msg and "gnu/linux" not in msg and "gnu linux" not in msg and "gnu\linux" not in msg:
-        reply = "GNU/Linux, por favor. Linux es sólo el kernel"
+        replies.append("GNU/Linux, por favor. Linux es sólo el kernel")
 
-    if reply is not None:
-        bot.sendMessage(update.message.chat_id, text=reply)
+    if len(replies) > 0:
+        if len(replies) > 5:
+            reply = random.choice(["Sois unos pesaos", "java.lang.IndexOutOfBoundsException",
+                                   "A ve, vamos por partes. Peazo de trolles",
+                                   "Ahora me enfado y no respiro. Pesaos."])
+            bot.sendMessage(update.message.chat_id, text=reply)
+        else:
+            bot.sendMessage(update.message.chat_id, text=random.choice(replies))
 
 
 def buscar(bot, update, args):
