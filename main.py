@@ -81,7 +81,7 @@ def randomchat(bot, update):
         replies.append("GNU/Linux, por favor. Linux es sólo el kernel")
 
     if len(replies) > 0:
-        if len(replies) > 5:
+        if len(replies) > 3:
             reply = random.choice(["Sois unos pesaos", "java.lang.IndexOutOfBoundsException",
                                    "A ve, vamos por partes. Peazo de trolles",
                                    "Ahora me enfado y no respiro. Pesaos."])
