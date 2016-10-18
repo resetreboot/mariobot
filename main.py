@@ -77,7 +77,7 @@ def randomchat(bot, update):
     if "puto bot" in msg and "martixx" in user_name:
         reply = "HOYGA, punki, no se pase un pelo"
 
-    if "linux" in msg:
+    if "linux" in msg and "gnu/linux" not in msg and "gnu linux" not in msg and "gnu\linux" not in msg:
         reply = "GNU/Linux, por favor. Linux es sólo el kernel"
 
     if reply is not None:
