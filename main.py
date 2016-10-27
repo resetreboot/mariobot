@@ -74,8 +74,16 @@ def randomchat(bot, update):
             "NO PUEDO HINZTALARLO EN MI JAMEVOY HALLUDA"
         ]))
 
-    if "puto bot" in msg and "martixx" in user_name:
-        replies.append("HOYGA, punki, no se pase un pelo")
+    if "puto bot" in msg:
+        if "martixx" in user_name:
+            replies.append(random.choice(["HOYGA, punki, no se pase un pelo.",
+                                        "¡No temo a tus poderes de juanker!",
+                                        "Reseeeeet, la punki se mete conmigooooo... joooo..."])
+
+        else:
+            replies.append(random.choice(["Cuidaíto conmigo, que te dejo de hablar.",
+                                          "Soy así porque me programásteis así.",
+                                          "La tomas conmigo porque soy un bot y no me puedo defender"]))
 
     if "linux" in msg and "gnu/linux" not in msg and "gnu linux" not in msg and "gnu\linux" not in msg:
         replies.append("GNU/Linux, por favor. Linux es sólo el kernel")
