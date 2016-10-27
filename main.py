@@ -78,7 +78,7 @@ def randomchat(bot, update):
         if "martixx" in user_name:
             replies.append(random.choice(["HOYGA, punki, no se pase un pelo.",
                                         "¡No temo a tus poderes de juanker!",
-                                        "Reseeeeet, la punki se mete conmigooooo... joooo..."])
+                                        "Reseeeeet, la punki se mete conmigooooo... joooo..."]))
 
         else:
             replies.append(random.choice(["Cuidaíto conmigo, que te dejo de hablar.",
