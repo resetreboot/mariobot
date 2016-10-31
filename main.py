@@ -74,6 +74,22 @@ def randomchat(bot, update):
             "NO PUEDO HINZTALARLO EN MI JAMEVOY HALLUDA"
         ]))
 
+    if "cuñado tecnologico" in msg or "cuñado tecnológico" in msg:
+        replies.append(random.choice([
+            "Es deformación profesional, me salta el analista que llevo dentro.",
+            "Soy un profesional del sector, por eso soy falso autónomo, es lo mejor.",
+            "No tienes ni idea, vete a ver mi análisis profesional.",
+            "Sois unos macarras que no teneis ni idea, no como yo, que se de esto porque soy analista profesional."
+        ]))
+
+    if "juanker" in msg:
+        replies.append(random.choice([
+            "ME E KOMPRADO HUN KRAK PREMIUN HEDISION I HOS BOI A JUANKEAR EL FEIZBU.",
+            "yA tEngO tU iP pArA jAqUeArTe, lA 127.0.0.1, pReParAtE pArA fLiP... (Connection reset by peer).",
+            "Bah, no eres 1337 como yo, pringao.",
+            "lA NaSa Y eL pEntAgOn0 n0 tIeNeN s3cRe7oS pAr4 mI."
+        ]))
+
     if "puto bot" in msg:
         if "martixx" in user_name:
             replies.append(random.choice(["HOYGA, punki, no se pase un pelo.",
