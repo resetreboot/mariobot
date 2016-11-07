@@ -74,7 +74,7 @@ def randomchat(bot, update):
             "NO PUEDO HINZTALARLO EN MI JAMEVOY HALLUDA"
         ]))
 
-    if "cuñado tecnologico" in msg or "cuñado tecnológico" in msg:
+    if "cuñado tecnologico" in msg or "cuñado tecnológico" in msg or "cibercuñado" in msg:
         replies.append(random.choice([
             "Es deformación profesional, me salta el analista que llevo dentro.",
             "Soy un profesional del sector, por eso soy falso autónomo, es lo mejor.",
@@ -88,6 +88,14 @@ def randomchat(bot, update):
             "yA tEngO tU iP pArA jAqUeArTe, lA 127.0.0.1, pReParAtE pArA fLiP... (Connection reset by peer).",
             "Bah, no eres 1337 como yo, pringao.",
             "lA NaSa Y eL pEntAgOn0 n0 tIeNeN s3cRe7oS pAr4 mI."
+        ]))
+
+    if "javascript" in msg:
+        replies.append(random.choice([
+            "undefined is not a function, HOSTIAS.",
+            "¿Qué es la vida sin tres tipos diferentes de valores nulos?",
+            "Ahora también en los servidores, porque el determinismo está sobrevalorado.",
+            "Han pasado NaN dias desde el último accidente de Javascrip",
         ]))
 
     if "puto bot" in msg:
