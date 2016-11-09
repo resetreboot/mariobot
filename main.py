@@ -5,6 +5,7 @@ import logging
 import requests
 import sys
 import random
+import brainfuck
 
 from telegram.ext import (Updater, CommandHandler, MessageHandler,
                           Filters)
@@ -122,22 +123,13 @@ def randomchat(bot, update):
             bot.sendMessage(update.message.chat_id, text=random.choice(replies))
 
 
-def buscar(bot, update, args):
-    duck_url = "http://api.duckduckgo.com"
+def brainfuck_parse(bot, update, args):
+    code = "".join(args)
+    try:
+        result = brainfuck.execute(code, [0] * 500)
 
-    params = {"q": " ".join(args), "format": "json", "no_html": 1, "skip_disambig": 1}
-    query = requests.get(duck_url, params=params)
-    if len(query.json().items()) > 0:
-        result = ""
-        if query.json()["Infobox"] != "":
-            for element in query.json()["Infobox"]["content"]:
-                result += element["label"] + ": " + element["value"] + "\n"
-
-        else:
-            result = "No he encontrado nada, sigue rascando"
-
-    else:
-        result = "Tango Down: El pato de las búsquedas está caído."
+    except:
+        result = "Tu brainfuck es penoso, ha dado error."
 
     bot.sendMessage(update.message.chat_id, text=result)
 
@@ -155,7 +147,7 @@ def main():
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help))
-    dispatcher.add_handler(CommandHandler("buscar", buscar, pass_args=True))
+    dispatcher.add_handler(CommandHandler("bf", brainfuck_parse, pass_args=True))
 
     # on noncommand i.e message - echo the message on Telegram
     dispatcher.add_handler(MessageHandler([Filters.text], randomchat))
