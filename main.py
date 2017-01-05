@@ -96,7 +96,15 @@ def randomchat(bot, update):
             "undefined is not a function, HOSTIAS.",
             "¿Qué es la vida sin tres tipos diferentes de valores nulos?",
             "Ahora también en los servidores, porque el determinismo está sobrevalorado.",
-            "Han pasado NaN dias desde el último accidente de Javascrip",
+            "Han pasado NaN dias desde el último accidente de Javascript.",
+        ]))
+
+    if "paas" in msg:
+        replies.append(random.choice([
+            "Vamos a hacer putos Docker más grandes que el host.",
+            "Nunca metáis algo serio, con estado, en Docker ;)",
+            "Jugad con vuestros juguetes. Esta pieza va a estar bajo MI responsabilidad y no se mete en un puto Docker.",
+            "Toda la innovación de Docker me parece un atraso espectacular.",
         ]))
 
     if "puto bot" in msg:
