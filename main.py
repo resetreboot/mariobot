@@ -57,7 +57,7 @@ def randomchat(bot, update):
         ]))
 
     if "datio" in msg:
-        replies.append("¡ah!, ¿ya existe Datio?")
+        replies.append("¡ah!, ¿todavía existe Datio?")
 
     if "maiesekueleh" in msg:
         replies.append(random.choice([
