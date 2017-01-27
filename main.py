@@ -123,7 +123,7 @@ def randomchat(bot, update):
             replies.append(random.choice(["Cuidaíto conmigo, que te dejo de hablar.",
                                           "Soy así porque me programásteis así.",
                                           "La tomas conmigo porque soy un bot y no me puedo defender",
-                                          "Querrás decir puto @DSMTools_bot"
+                                          "Querrás decir puto @DSMTools_bot",
                                           "Os metéis conmigo porque con Danibot no hay huevos"]))
 
     if "rae" in msg and "DSMTools_bot" in user_name:
