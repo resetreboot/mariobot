@@ -110,13 +110,25 @@ def randomchat(bot, update):
     if "puto bot" in msg:
         if "martixx" in user_name:
             replies.append(random.choice(["HOYGA, punki, no se pase un pelo.",
-                                        "¡No temo a tus poderes de juanker!",
-                                        "Reseeeeet, la punki se mete conmigooooo... joooo..."]))
-
+                                          "¡No temo a tus poderes de juanker!",
+                                          "Reseeeeet, la punki se mete conmigooooo... joooo...",
+                                          "Señora, a darle la matraca a Danibot"]))
+        elif "DSMTools_bot" in user_name:
+            replies.append(random.choice(["Tu no te pases, pedazo de chatarra",
+                                          "Uy cuidado, el que no pasa el test de Turing",
+                                          "¿Por qué no nos hablas de tu madre, simpatíco?",
+                                          "Anda y que te ondulen con el test Voidght-Kampf",
+                                          "Para usted SEÑOR bot"]))
         else:
             replies.append(random.choice(["Cuidaíto conmigo, que te dejo de hablar.",
                                           "Soy así porque me programásteis así.",
-                                          "La tomas conmigo porque soy un bot y no me puedo defender"]))
+                                          "La tomas conmigo porque soy un bot y no me puedo defender",
+                                          "Querrás decir puto @DSMTools_bot"
+                                          "Os metéis conmigo porque con Danibot no hay huevos"]))
+
+    if "rae" in msg and "DSMTools_bot" in user_name:
+            replies.append(random.choice(["Ñiñiñiñiñi...",
+                                          "Ya salió el sabiondo"]))
 
     if "linux" in msg and "gnu/linux" not in msg and "gnu linux" not in msg and "gnu\linux" not in msg:
         replies.append("GNU/Linux, por favor. Linux es sólo el kernel")
