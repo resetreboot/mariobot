@@ -126,7 +126,7 @@ def randomchat(bot, update):
                                           "Querrás decir puto @DSMTools_bot",
                                           "Os metéis conmigo porque con Danibot no hay huevos"]))
 
-    if "rae" in msg and "DSMTools_bot" in user_name:
+    if "1. " in msg and "DSMTools_bot" in user_name:
             replies.append(random.choice(["Ñiñiñiñiñi...",
                                           "Ya salió el sabiondo"]))
 
